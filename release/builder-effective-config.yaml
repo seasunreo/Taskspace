@@ -1,0 +1,20 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.taskspace.desktop
+productName: Taskspace
+npmRebuild: false
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+      - package.json
+win:
+  target:
+    - nsis
+    - portable
+  artifactName: Taskspace-${version}-${arch}.${ext}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 44.2.0
